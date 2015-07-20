@@ -6,5 +6,26 @@ angular.module('myApp', [
   'myApp.version'
 ]).
 config(['$routeProvider', function($routeProvider) {
-  $routeProvider.otherwise({redirectTo: '/'});
+  $routeProvider
+  .when('/', {
+      // redirect to the notes index
+      redirectTo: '/home'
+    })
+
+  .when('/home', {
+      templateUrl: 'templates/pages/home/index.html',
+      controller: 'HomeController'
+    })
+
+  .when('/focus', {
+      templateUrl: 'templates/pages/home/focus.html',
+      controller: 'FocusController'
+    })
+
+  .when('/style', {
+      templateUrl: 'templates/pages/home/style.html',
+      controller: 'StyleController'
+    })
+
+  .otherwise({redirectTo: '/'});
 }]);
