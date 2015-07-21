@@ -8,7 +8,7 @@ angular.module('myApp', [
 config(['$routeProvider', function($routeProvider) {
   $routeProvider
   .when('/', {
-      // redirect to the notes index
+      // redirect to the home index
       redirectTo: '/home'
     })
 
@@ -25,6 +25,10 @@ config(['$routeProvider', function($routeProvider) {
   .when('/style', {
       templateUrl: 'templates/pages/home/style.html',
       controller: 'StyleController'
+    })
+
+  .when('/wod', {
+      templateUrl: 'templates/pages/wod/index.html'
     })
 
   .otherwise({redirectTo: '/'});

@@ -9,8 +9,8 @@
   <title>My AngularJS App</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!--<link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">-->
-  <!--<link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">-->
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
   <!--<link rel="stylesheet" href="css/bootstrap.min.css">-->
   <link href="//fonts.googleapis.com/css?family=Oxygen:400,300,200,100&amp;subset=latin,cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="app.css">
@@ -18,7 +18,7 @@
 </head>
 <body>
   
-  <div id="headline">
+  <div id="headline" ng-hide="false">
     <div class="container">
         <header>
           <h1>Workout of the day on the go</h1>
@@ -27,13 +27,9 @@
       </div>
   </div>
 
-    <div id="section1">
-      <div ng-view>Workout customization view</div>
-    </div>
-
-    <div><h2>Angular seed app: v<span app-version></span></h2></div>
+  <div ng-view>Workout customization view</div>
   
-  <footer>
+  <footer ng-hide="false">
       <div class="container">
         <p></p>
       </div>
@@ -47,5 +43,8 @@
   <script src="components/version/version.js"></script>
   <script src="components/version/version-directive.js"></script>
   <script src="components/version/interpolate-filter.js"></script>
+
+   <!-- Controllers -->
+    <script src="controllers/home-controller.js"></script>
 </body>
 </html>
