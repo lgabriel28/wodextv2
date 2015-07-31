@@ -19,12 +19,12 @@ config(['$routeProvider', function($routeProvider) {
 
   .when('/focus', {
       templateUrl: 'templates/pages/home/focus.html',
-      controller: 'FocusController'
+      controller: 'HomeController'
     })
 
   .when('/style', {
       templateUrl: 'templates/pages/home/style.html',
-      controller: 'StyleController'
+      controller: 'HomeController'
     })
 
   .when('/wod', {

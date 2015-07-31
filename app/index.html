@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>My AngularJS App</title>
+  <title>Wodx TV</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
@@ -17,8 +17,8 @@
   <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 <body>
-  
-  <div id="headline" ng-hide="false">
+
+<div id="headline" ng-hide="myVar">
     <div class="container">
         <header>
           <h1>Workout of the day on the go</h1>
@@ -29,11 +29,13 @@
 
   <div ng-view>Workout customization view</div>
   
+  <!--
   <footer ng-hide="false">
       <div class="container">
         <p></p>
       </div>
   </footer>
+-->
 
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>

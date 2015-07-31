@@ -1,12 +1,14 @@
-
 <div id="section1">
 	<div class="container">
 		<h2>Customize your workout:</h2>
 		<h3>Let's get started. Select level of intensity below.</h3>
 		<div id="images">
-	  		<a href="#/focus"><img src="images/easy-edited2.png" alt="Easy"></a>
-	  		<a href="#/focus"><img src="images/medium-edited.png" alt="Medium"></a>
-	  		<a href="#/focus"><img src="images/hard-edited.png" alt="Hard"></a>
+			<!--Directive containing our options here... <wt-intensity> </wt-intensity> -->
+			<!--Modify the routes to include an :id and ngParams within home 
+			to be able to switch views (intensity, focus, format) using the same controller-->
+	  		<a ng-click="configure()" href="#/focus"><img src="images/{{intensity.easy}}" alt="Easy"></a>
+	  		<a href="#/focus"><img src="images/{{intensity.medium}}" alt="Medium"></a>
+	  		<a href="#/focus"><img src="images/{{intensity.hard}}" alt="Hard"></a>
 		</div>
 		<br>
 	</div>
