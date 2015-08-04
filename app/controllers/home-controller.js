@@ -1,4 +1,5 @@
-angular.module('myApp').controller('HomeController', function($scope) {
+angular.module('myApp')
+.controller('HomeController', function($scope) {
 
   $scope.setup = {
     intensity:"",
@@ -7,24 +8,14 @@ angular.module('myApp').controller('HomeController', function($scope) {
   };
 
   $scope.intensity = {
-    easy: "easy-edited2.png",
-    medium: "medium-edited.png",
-    hard: "hard-edited.png"
-  };
- 
-  $scope.focus = {
-    cardio: "cardio.png",
-    strength: "strength.png",
-    both: "both.png"
+    title: "Customize your workout:",
+    subtitle: "Let's get started. Select level of intensity below.",
+    easy: "easy.png",
+    medium: "medium.png",
+    hard: "hard.png"
   };
 
-  $scope.format = {
-    fortime: "forTime.png",
-    amrap: "amrap.png",
-    emotm: "emotm.png"
-  };
-
-  // Create function to write setup object.
+  // Create function hide headline.
   $scope.configure = function() {
         
         $scope.myVar = !$scope.myVar;
