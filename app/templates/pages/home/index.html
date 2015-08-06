@@ -1,10 +1,11 @@
 <div class="container">
-	<h2>{{intensity.title}}</h2>
-	<h3>{{intensity.subtitle}}</h3>
+	<h2>{{category.title}}</h2>
+	<h3>{{category.subtitle}}</h3>
+	<a ng-show="category.wod" href="wod.html" center><img src="images/{{category.icon3}}" alt="{{category.setting3}}"></a>
 	<div id="images">
-  		<a ng-click="configure()" href="#/focus"><img src="images/{{intensity.easy}}" alt="Easy"></a>
-  		<a href="#/focus"><img src="images/{{intensity.medium}}" alt="Medium"></a>
-  		<a href="#/focus"><img src="images/{{intensity.hard}}" alt="Hard"></a>
+  		<a ng-hide="category.wod" ng-click="configure(param, category.setting1)"><img src="images/{{category.icon1}}" alt="{{category.setting1}}"></a>
+  		<a ng-hide="category.wod" ng-click="configure(param, category.setting2)"><img src="images/{{category.icon2}}" alt="{{category.setting2}}"></a>
+  		<a ng-hide="category.wod" ng-click="configure(param, category.setting3)"><img src="images/{{category.icon3}}" alt="{{category.setting3}}"></a>
 	</div>
 	<br>
 </div>
