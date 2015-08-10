@@ -3,7 +3,8 @@
 // Declare app level module which depends on views, and components
 angular.module('myApp', [
   'ngRoute',
-  'myApp.version'
+  'myApp.version',
+  'ngResource'
 ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider
@@ -17,18 +18,9 @@ config(['$routeProvider', function($routeProvider) {
       controller: 'HomeController'
     })
 
-  .when('/focus', {
-      templateUrl: 'templates/pages/home/focus.html',
-      controller: 'FocusController'
-    })
-
-  .when('/style', {
-      templateUrl: 'templates/pages/home/style.html',
-      controller: 'FormatController'
-    })
-
-  .when('/wod', {
-      templateUrl: 'templates/pages/wod/index.html'
+  .when('/wod/:id', {
+      templateUrl: 'templates/pages/wod/index.html',
+      controller: 'WodController'
     })
 
   .otherwise({redirectTo: '/'});

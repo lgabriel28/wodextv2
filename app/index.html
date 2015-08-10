@@ -17,21 +17,10 @@
   <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 <body>
-
-<div id="headline" ng-hide="myVar">
-    <div class="container">
-        <header>
-          <h1>Workout of the day on the go</h1>
-          <p>Lorem ipsum dolor sit amet.</p>
-        </header>
-      </div>
-  </div>
-
-<div id="section1">
-  <div ng-view>Workout customization view</div>
-</div>
+  
+  <div ng-view></div>
   <!--
-  <footer ng-hide="false">
+  <footer>
       <div class="container">
         <p></p>
       </div>
@@ -43,14 +32,16 @@
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
   <script src="/js/vendor/angular-resource.min.js"></script>
-  <script src="app.js"></script>
   <script src="components/version/version.js"></script>
   <script src="components/version/version-directive.js"></script>
   <script src="components/version/interpolate-filter.js"></script>
+   <script src="app.js"></script>
 
    <!-- Controllers -->
-    <script src="controllers/home-controller.js"></script>
-    <script src="controllers/focus-controller.js"></script>
-    <script src="controllers/format-controller.js"></script>
+    <script src="/js/controllers/home-controller.js"></script>
+    <script src="/js/controllers/wod-controller.js"></script>
+
+    <!-- Services -->
+    <script src="/js/services/wod.js"></script>
 </body>
 </html>
