@@ -50,7 +50,6 @@ angular.module('myApp')
   $scope.category = $scope.setup.intensity;
   $scope.param = 'focus';
   $scope.settings = [];
-  //$scope.wod = false;
 
   $scope.configure = function(category, setting) {
     
@@ -75,7 +74,5 @@ angular.module('myApp')
             $scope.settings = [];
     }
   };
-
-  // Create function hide headline when wod is displayed.
 
 });
