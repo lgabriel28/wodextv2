@@ -1,10 +1,6 @@
 angular.module('myApp')
 .controller('WodController', function($scope, $routeParams, Wod) {
 
-var reps;
-var exercises;
-var clock;
-
 var settings = $routeParams.id;
 settings = settings.replace(/[\[\]']+/g,'');
 settings = settings.split(",");
@@ -14,11 +10,10 @@ $scope.wod = Wod.query({id: parameters});
 
 $scope.wod.$promise.then(function (result) {
     $scope.wod = result;
+    $scope.reps = $scope.wod[0];
+ 	$scope.exercise = $scope.wod[1];
+	$scope.clock = $scope.wod[2];
 });
 
-// var reps = $scope.wod.promise[0];
-// var exercises = $scope.wod[1];
-// var clock = $scope.wod[2];
-
-
+ 
 });

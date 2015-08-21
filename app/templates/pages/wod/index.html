@@ -2,11 +2,28 @@
 	<div class="video-box" id="vid-expand">
 		<!--<div class="location-overlay" style="opacity: 0;"><p class="location-overlay-text">Federal Heights, Colorado, United States</p></div>-->
 		<div class="video-controls">
-			<div class="lightbulb"><i class="fa fa-lightbulb-o fa-lg"></i></div><div class="prev"><i class="fa fa-backward fa-lg"></i></div><div class="pause-play"><i class="fa fa-lg fa-play"></i></div><div class="next"><i class="fa fa-forward fa-lg"></i></div><div class="expand"><i class="fa fa-arrows-alt fa-lg"></i></div>
+			<div class="lightbulb">
+				<i class="fa fa-lightbulb-o fa-lg"></i>
+			</div>
+			<div class="prev">
+				<i class="fa fa-backward fa-lg"></i>
+			</div>
+			<div class="pause-play">
+				<i class="fa fa-lg fa-play"></i>
+			</div>
+			<div class="next">
+				<i class="fa fa-forward fa-lg"></i>
+			</div>
+			<div class="expand">
+				<i class="fa fa-arrows-alt fa-lg"></i>
+			</div>
 		</div>
-		<div class="video-active"><video height="100%" width="100%" autoplay="" muted="">
-		<source src="https://scontent.cdninstagram.com/hphotos-xaf1/t50.2886-16/11771373_976216705734822_1766444921_n.mp4" type="video/mp4">
-		<p>this is a fallback message</p></video></div>	
+		<div class="video-active">
+			<video height="100%" width="100%" autoplay="" muted="">
+				<source src="https://scontent.cdninstagram.com/hphotos-xaf1/t50.2886-16/11771373_976216705734822_1766444921_n.mp4" type="video/mp4">
+				<p>this is a fallback message</p>
+			</video>
+		</div>	
 	</div>
 
 	<div class="woditem" style="position: relative;">
@@ -14,7 +31,7 @@
 			<div class="content-box">
 				<div class="content-animation" style="top: 0%;">
 					<div class="container">
-						<wt-wod reps="{{wod[0]}}" excercice="{{wod[1]}}" clock="{{wod[2]}}"></wt-wod>
+						<wt-wod reps="{{reps}}" exercise="{{exercise}}" clock="{{clock}}"></wt-wod>
 					</div>	
 				</div>
 			</div>

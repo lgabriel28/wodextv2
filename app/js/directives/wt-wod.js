@@ -3,7 +3,11 @@ angular.module('myApp')
   return {
     replace: true,
     restrict: "E",
-    scope: {},
-    templateUrl: "templates/directives/wt-wod.html"
+    templateUrl: "templates/directives/wt-wod.html",
+    scope: {
+     reps: "@",
+     exercise: "@",
+     clock: "@"
+    }
   };
 }]);
