@@ -266,8 +266,24 @@ tbody {
   flex: 1;
   position: relative;
   height: 100vh;
+  background-image: radial-gradient(circle 20em, #3A494D, #183941);
 }
 
+.music-player {
+    background-color: #020F12;
+    height: 5%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    /* border-top: 1px solid #000; */
+    box-shadow: 0 -1px 0 #062831;
+}
+
+.music-box {
+    display: inline-block;
+    background-color: #020F12;
+    height: 100%;
+}
 
 @media screen and (min-width: 600px) {
           #headline {

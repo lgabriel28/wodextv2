@@ -6,8 +6,17 @@ $intensity = $_GET['intensity'];
 $focus = $_GET['focus'];
 $format = $_GET['format'];
 
+$workouts = array(
+		array('21-15-9', 'Air Squats - Burpees - Sit Ups', 'For Time'),
+		array('7-7-7', 'One legged deadlift - Jumping Jax - Hollow Rocks', 'AMRAP'),
+		array('20 min', 'Mountain Climbers - Air Squads - Push ups', 'EMOTM'),
+		array('10', 'Burpees - Thrusters', 'EMOTM'),
+		array('5-10-20', 'Jumping Air Squad - Jumping Jax - Thrusters', 'For Time'),
+		array('15 min', 'Mountain Climbers - Air Squads - Push ups', 'EMOTM')
+	);
 
-$wod = array('21-15-9', 'Air Squats - Burpees - Sit Ups', 'ForTime');
+$num = rand(0, count($workouts)-1);
+$wod = $workouts[$num];
 echo json_encode($wod);
 
 ?>

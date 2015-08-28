@@ -1,5 +1,5 @@
 angular.module('myApp')
-.controller('WodController', function($scope, $routeParams, Wod) {
+.controller('WodController', function($scope, $routeParams, $sce, Wod, Video) {
 
 var settings = $routeParams.id;
 settings = settings.replace(/[\[\]']+/g,'');
@@ -8,12 +8,18 @@ var parameters = "intensity="+settings[0]+"&focus="+settings[1]+"&format="+setti
 
 $scope.wod = Wod.query({id: parameters});
 
-$scope.wod.$promise.then(function (result) {
-    $scope.wod = result;
-    $scope.reps = $scope.wod[0];
- 	$scope.exercise = $scope.wod[1];
-	$scope.clock = $scope.wod[2];
-});
+	$scope.wod.$promise.then(function (result) {
+	    $scope.wod = result;
+	    $scope.reps = $scope.wod[0];
+	 	$scope.exercise = $scope.wod[1];
+		$scope.clock = $scope.wod[2];
 
+		$scope.video = Video.query({id: $scope.exercise});
+
+		$scope.video.$promise.then(function (result) {
+			$scope.video = result;
+			$scope.src = $sce.trustAsResourceUrl($scope.video[0]);
+		});		
+	});
  
 });
