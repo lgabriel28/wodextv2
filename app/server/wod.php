@@ -11,7 +11,7 @@ $workouts = array(
 		array('7-7-7', 'One legged deadlift - Jumping Jax - Hollow Rocks', 'AMRAP'),
 		array('20 min', 'Mountain Climbers - Air Squads - Push ups', 'EMOTM'),
 		array('10', 'Burpees - Thrusters', 'EMOTM'),
-		array('5-10-20', 'Jumping Air Squad - Jumping Jax - Thrusters', 'For Time'),
+		array('5-10-20', 'Jumping Air Squats - Jumping Jax - Thrusters', 'For Time'),
 		array('15 min', 'Mountain Climbers - Air Squads - Push ups', 'EMOTM')
 	);
 

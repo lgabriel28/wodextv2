@@ -6,6 +6,9 @@ angular.module('myApp')
     templateUrl: "templates/directives/wt-video.html",
     scope: {
      src: "@"
+    },
+    link: function(scope, element){
+
     }
   };
 }]);

@@ -13,13 +13,14 @@ $scope.wod = Wod.query({id: parameters});
 	    $scope.reps = $scope.wod[0];
 	 	$scope.exercise = $scope.wod[1];
 		$scope.clock = $scope.wod[2];
+		var exerciseParam = "exercise="+$scope.exercise; 
 
-		$scope.video = Video.query({id: $scope.exercise});
+		$scope.video = Video.query({id: exerciseParam});
 
 		$scope.video.$promise.then(function (result) {
 			$scope.video = result;
-			$scope.src = $sce.trustAsResourceUrl($scope.video[0]);
+			var index = Math.floor((Math.random() * ($scope.video.length-1)) + 1);
+			$scope.src = $sce.trustAsResourceUrl($scope.video[index]);
 		});		
 	});
- 
 });
