@@ -2,7 +2,7 @@
     <div class="container">
         <header>
           <h1>Workout of the day on the go</h1>
-          <p>Lorem ipsum dolor sit amet.</p>
+          <p>There is always a way.</p>
         </header>
       </div>
   </div>
@@ -13,9 +13,9 @@
 	<h3>{{category.subtitle}}</h3>
 	<h3><a ng-show="category.wod" href="#/wod/{{settings}}" center><img src="images/{{category.icon1}}" alt="{{category.setting1}}"></a></h3>
 	<div id="images" ng-hide="category.wod">
-  		<a ng-click="configure(param, category.setting1)"><img src="images/{{category.icon1}}" alt="{{category.setting1}}"></a>
-  		<a ng-click="configure(param, category.setting2)"><img src="images/{{category.icon2}}" alt="{{category.setting2}}"></a>
-  		<a ng-click="configure(param, category.setting3)"><img src="images/{{category.icon3}}" alt="{{category.setting3}}"></a>
+  		<a ng-click="configure(param, category.setting1)">{{category.setting1}}<img src="images/{{category.icon1}}" alt="{{category.setting1}}"></a>
+  		<a ng-click="configure(param, category.setting2)">{{category.setting2}}<img src="images/{{category.icon2}}" alt="{{category.setting2}}"></a>
+  		<a ng-click="configure(param, category.setting3)">{{category.setting3}}<img src="images/{{category.icon3}}" alt="{{category.setting3}}"></a>
 	</div>
 	<br>
 </div>

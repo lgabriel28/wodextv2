@@ -32,7 +32,7 @@ angular.module('myApp')
       icon1: "forTime.png",
       icon2: "amrap.png",
       icon3: "emotm.png",
-      setting1: "ForTime",
+      setting1: "For Time",
       setting2: "AMRAP",
       setting3: "EMOTM",
       wod: false

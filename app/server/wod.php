@@ -7,7 +7,7 @@ $focus = $_GET['focus'];
 $format = $_GET['format'];
 
 $workouts = array(
-		array('21-15-9', 'Air Squats - Burpees - Sit Ups', 'For Time'),
+		array('21-15-9', 'Air Squads - Burpees - Sit Ups', 'For Time'),
 		array('7-7-7', 'One legged deadlift - Jumping Jax - Hollow Rocks', 'AMRAP'),
 		array('20 min', 'Mountain Climbers - Air Squads - Push ups', 'EMOTM'),
 		array('10', 'Burpees - Thrusters', 'EMOTM'),

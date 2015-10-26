@@ -5,7 +5,11 @@ angular.module('myApp')
     restrict: "E",
     templateUrl: "templates/directives/wt-video.html",
     scope: {
-     src: "@"
+     src: "@",
+     video: "@"
+    },
+    link: function(scope, element, attr){
+    	
     }
   };
 }]);
