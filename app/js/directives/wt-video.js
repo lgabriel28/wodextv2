@@ -8,8 +8,13 @@ angular.module('myApp')
      src: "@",
      video: "@"
     },
-    link: function(scope, element, attr){
-    	
+    link: function(scope, element, attrs, controller){
+      console.log(element);
+      scope.$watch("video", function(value){
+        ///console.log(value, element, scope);
+        console.log(element["context"]["currentTime"]);
+      });
     }
+    
   };
 }]);
